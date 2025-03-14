@@ -1,12 +1,7 @@
 package package1;
-
-import package2.C;
 import  package2.*;
 
 public class A {
-    public static void main(String[] args) {
-        C c = new C();
+    protected String protectedMessage = "Hello from Femi's protected message";
 
-        System.out.println(c.publicMessage);
-    }
 }
