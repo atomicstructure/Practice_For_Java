@@ -16,10 +16,10 @@ public class Main {
         // Abstract Keyword = abstract classes cannot be instantiated, but they can have a subclass
         //                     abstract methods are declared without an implementation
 //        Vehicle vehicle = new Vehicle();
-        Car car = new Car();
-        car.go();
-        car.stop();
-
+//        Car car = new Car();
+//        car.go();
+//        car.stop();
+        // Public, protected, and private are access modifiers
 
 
     }
