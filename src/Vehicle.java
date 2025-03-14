@@ -1,4 +1,4 @@
-public class Vehicle {
-//    abstract void go();
-//    abstract void stop();
+public abstract class Vehicle {
+    abstract void go();
+    abstract void stop();
 }
