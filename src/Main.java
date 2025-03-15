@@ -22,17 +22,26 @@ public class Main {
         // Encapsulation = attributes of a class will be hidden or private, and can only be accessed through methods (getters & setters)
         //                 you should make attributes private if you don't have a reason to make them public/protected
 
-        Car car = new Car("Toyota", "Camry", 2020);
-        System.out.println(car.getMake());
+//        Car car = new Car("Toyota", "Camry", 2020);
+//        System.out.println(car.getMake());
+//
+//        // Using the setter method to change the value of the make, model, and year attribute
+//        car.setYear(2003);
+//        System.out.println(car.getYear());
+//        car.setModel("Corolla");
+//        System.out.println(car.getModel());
+//        car.setMake("Honda");
+//        System.out.println(car.getMake());
 
-        // Using the setter method to change the value of the make, model, and year attribute
-        car.setYear(2003);
-        System.out.println(car.getYear());
-        car.setModel("Corolla");
-        System.out.println(car.getModel());
-        car.setMake("Honda");
-        System.out.println(car.getMake());
+        // Copy Constructor = a constructor that accepts an object of the same class as a parameter
+        Car car1 = new Car("Toyota", "Camry", 2020);
+        Car car2 = new Car("Toyota", "Corolla", 2024);
+        car2.copy(car1);
+        System.out.println(car1);
+        System.out.println(car2);
 
+        System.out.println(car1.getMake());
+        System.out.println(car2.getMake());
 
     }
 }
