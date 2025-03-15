@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         // Super = Keyword refers to the superclass (parent) of an object
@@ -60,14 +62,34 @@ public class Main {
         //                method overriding = a child class providing a specific implementation of a method that is already provided by its parent class
         //                method overloading = methods within a class that have the same name but different parameters
 
-        Car car = new Car();
-        Bicycle bicycle = new Bicycle();
-        Boat boat = new Boat();
+//        Car car = new Car();
+//        Bicycle bicycle = new Bicycle();
+//        Boat boat = new Boat();
+//
+//        Vehicle[] racers = {car, bicycle, boat};
+//
+//        for (Vehicle racer : racers) {
+//            racer.go();
+//        }
 
-        Vehicle[] racers = {car, bicycle, boat};
-
-        for (Vehicle racer : racers) {
-            racer.go();
+        // Dynamic Polymorphism = the ability of a single method to do different things based on the object that it is acting upon
+        //                         the method to be called is determined at runtime
+        //                         method overriding is a perfect example of dynamic polymorphism
+        //                         dynamic polymorphism is implemented by abstract classes and interfaces
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("What animal do you want: ");
+        System.out.println("1. Dog, 2. Cat");
+        int choice = scanner.nextInt();
+        if (choice == 1){
+            Animal animal = new Dog();
+            animal.speak();
+        } else if (choice == 2){
+            Animal animal = new Cat();
+            animal.speak();
+        } else {
+            System.out.println("Invalid choice");
+            Animal animal = new Animal();
+            animal.speak();
         }
     }
 }
