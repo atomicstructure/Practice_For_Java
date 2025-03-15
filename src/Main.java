@@ -25,6 +25,14 @@ public class Main {
         Car car = new Car("Toyota", "Camry", 2020);
         System.out.println(car.getMake());
 
+        // Using the setter method to change the value of the make, model, and year attribute
+        car.setYear(2003);
+        System.out.println(car.getYear());
+        car.setModel("Corolla");
+        System.out.println(car.getModel());
+        car.setMake("Honda");
+        System.out.println(car.getMake());
+
 
     }
 }
