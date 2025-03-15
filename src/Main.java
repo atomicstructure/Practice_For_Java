@@ -34,14 +34,26 @@ public class Main {
 //        System.out.println(car.getMake());
 
         // Copy Constructor = a constructor that accepts an object of the same class as a parameter
-        Car car1 = new Car("Toyota", "Camry", 2020);
-        Car car2 = new Car("Toyota", "Corolla", 2024);
-        car2.copy(car1);
-        System.out.println(car1);
-        System.out.println(car2);
+//        Car car1 = new Car("Toyota", "Camry", 2020);
+//        Car car2 = new Car("Toyota", "Corolla", 2024);
+//        car2.copy(car1);
+//        System.out.println(car1);
+//        System.out.println(car2 );
+//
+//        System.out.println(car1.getMake());
+//        System.out.println(car2.getMake());
+        // Interfaces = a template that can be applied to a class
+        //             similar to inheritance, but specifies what a class has/must do
+        //             classes can apply more than one interface, inheritance is limited to one superclass
 
-        System.out.println(car1.getMake());
-        System.out.println(car2.getMake());
+        Rabbit rabbit = new Rabbit();
+        rabbit.flee();
 
+        Hawk hawk = new Hawk();
+        hawk.hunt();
+
+        Fish fish = new Fish();
+        fish.flee();
+        fish.hunt();
     }
 }
