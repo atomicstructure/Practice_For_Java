@@ -19,7 +19,11 @@ public class Main {
 //        Car car = new Car();
 //        car.go();
 //        car.stop();
-        // Public, protected, and private are access modifiers
+        // Encapsulation = attributes of a class will be hidden or private, and can only be accessed through methods (getters & setters)
+        //                 you should make attributes private if you don't have a reason to make them public/protected
+
+        Car car = new Car("Toyota", "Camry", 2020);
+        System.out.println(car.getMake());
 
 
     }
