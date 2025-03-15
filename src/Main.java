@@ -80,16 +80,30 @@ public class Main {
         System.out.println("What animal do you want: ");
         System.out.println("1. Dog, 2. Cat");
         int choice = scanner.nextInt();
-        if (choice == 1){
-            Animal animal = new Dog();
-            animal.speak();
-        } else if (choice == 2){
-            Animal animal = new Cat();
-            animal.speak();
-        } else {
-            System.out.println("Invalid choice");
-            Animal animal = new Animal();
-            animal.speak();
+//        if (choice == 1){
+//            Animal animal = new Dog();
+//            animal.speak();
+//        } else if (choice == 2){
+//            Animal animal = new Cat();
+//            animal.speak();
+//        } else {
+//            System.out.println("Invalid choice");
+//            Animal animal = new Animal();
+//            animal.speak();
+//        }
+        switch (choice){
+            case 1:
+                Animal animal = new Dog();
+                animal.speak();
+                break;
+            case 2:
+                Animal animal1 = new Cat();
+                animal1.speak();
+                break;
+            default:
+                System.out.println("Invalid choice");
+                Animal animal2 = new Animal();
+                animal2.speak();
         }
     }
 }
