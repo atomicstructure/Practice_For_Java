@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -76,10 +77,10 @@ public class Main {
         //                         the method to be called is determined at runtime
         //                         method overriding is a perfect example of dynamic polymorphism
         //                         dynamic polymorphism is implemented by abstract classes and interfaces
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("What animal do you want: ");
-        System.out.println("1. Dog, 2. Cat");
-        int choice = scanner.nextInt();
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("What animal do you want: ");
+//        System.out.println("1. Dog, 2. Cat");
+//        int choice = scanner.nextInt();
 //        if (choice == 1){
 //            Animal animal = new Dog();
 //            animal.speak();
@@ -91,19 +92,40 @@ public class Main {
 //            Animal animal = new Animal();
 //            animal.speak();
 //        }
-        switch (choice){
-            case 1:
-                Animal animal = new Dog();
-                animal.speak();
-                break;
-            case 2:
-                Animal animal1 = new Cat();
-                animal1.speak();
-                break;
-            default:
-                System.out.println("Invalid choice");
-                Animal animal2 = new Animal();
-                animal2.speak();
+//        switch (choice) {
+//            case 1:
+//                Animal animal = new Dog();
+//                animal.speak();
+//                break;
+//            case 2:
+//                Animal animal1 = new Cat();
+//                animal1.speak();
+//                break;
+//            default:
+//                System.out.println("Invalid choice");
+//                Animal animal2 = new Animal();
+//                animal2.speak();
+//        }
+        // Exception = an event that occurs during the execution of a program that disrupts the normal flow of instructions
+        //            Exception Handling = the process of responding to exceptions
+        Scanner scanner = new Scanner(System.in);
+        try {
+            System.out.println("Enter a number to divide : ");
+            int x = scanner.nextInt();
+            System.out.println("Enter a number to divide by : ");
+            int y = scanner.nextInt();
+
+
+            int z = x / y;
+            System.out.println(z);
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero");
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input");
+        } catch (Exception e) {
+            System.out.println("An error occurred");
+        } finally {
+            scanner.close();
         }
     }
 }
