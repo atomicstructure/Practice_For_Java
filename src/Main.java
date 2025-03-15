@@ -46,14 +46,28 @@ public class Main {
         //             similar to inheritance, but specifies what a class has/must do
         //             classes can apply more than one interface, inheritance is limited to one superclass
 
-        Rabbit rabbit = new Rabbit();
-        rabbit.flee();
+//        Rabbit rabbit = new Rabbit();
+//        rabbit.flee();
+//
+//        Hawk hawk = new Hawk();
+//        hawk.hunt();
+//
+//        Fish fish = new Fish();
+//        fish.flee();
+//        fish.hunt();
 
-        Hawk hawk = new Hawk();
-        hawk.hunt();
+        // Polymorsphism = many shapes, a method can do different things based on the object that it is acting upon
+        //                method overriding = a child class providing a specific implementation of a method that is already provided by its parent class
+        //                method overloading = methods within a class that have the same name but different parameters
 
-        Fish fish = new Fish();
-        fish.flee();
-        fish.hunt();
+        Car car = new Car();
+        Bicycle bicycle = new Bicycle();
+        Boat boat = new Boat();
+
+        Vehicle[] racers = {car, bicycle, boat};
+
+        for (Vehicle racer : racers) {
+            racer.go();
+        }
     }
 }
