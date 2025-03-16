@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.io.*;
 import java.util.InputMismatchException;
@@ -8,165 +9,185 @@ public class Main {
     public static void main(String[] args) {
         // Super = Keyword refers to the superclass (parent) of an object
         //         very similar to the "this" keyword
+        /*
+        Hero hero = new Hero("Femi", 38, "Super Strength");
+        Hero her1 = new Hero("Oluwafemi", 39, "Super Strength");
 
-//        Hero hero = new Hero("Femi", 38, "Super Strength");
-//        Hero her1 = new Hero("Oluwafemi", 39, "Super Strength");
-//
-//        hero.age = 40;
-//        hero.power = "Super Speed";
-//        hero.name = "Samantha";
-//        System.out.println(hero.name);
-//
-//        System.out.println(her1.toString());
+        hero.age = 40;
+        hero.power = "Super Speed";
+        hero.name = "Samantha";
+        System.out.println(hero.name);
+
+        System.out.println(her1.toString());
+         */
 
         // Abstract Keyword = abstract classes cannot be instantiated, but they can have a subclass
         //                     abstract methods are declared without an implementation
-//        Vehicle vehicle = new Vehicle();
-//        Car car = new Car();
-//        car.go();
-//        car.stop();
+        /*
+        Vehicle vehicle = new Vehicle();
+        Car car = new Car();
+        car.go();
+        car.stop();
+         */
+
         // Encapsulation = attributes of a class will be hidden or private, and can only be accessed through methods (getters & setters)
         //                 you should make attributes private if you don't have a reason to make them public/protected
+        /*
+        Car car = new Car("Toyota", "Camry", 2020);
+        System.out.println(car.getMake());
 
-//        Car car = new Car("Toyota", "Camry", 2020);
-//        System.out.println(car.getMake());
-//
-//        // Using the setter method to change the value of the make, model, and year attribute
-//        car.setYear(2003);
-//        System.out.println(car.getYear());
-//        car.setModel("Corolla");
-//        System.out.println(car.getModel());
-//        car.setMake("Honda");
-//        System.out.println(car.getMake());
+        // Using the setter method to change the value of the make, model, and year attribute
+        car.setYear(2003);
+        System.out.println(car.getYear());
+        car.setModel("Corolla");
+        System.out.println(car.getModel());
+        car.setMake("Honda");
+        System.out.println(car.getMake());
+         */
 
         // Copy Constructor = a constructor that accepts an object of the same class as a parameter
-//        Car car1 = new Car("Toyota", "Camry", 2020);
-//        Car car2 = new Car("Toyota", "Corolla", 2024);
-//        car2.copy(car1);
-//        System.out.println(car1);
-//        System.out.println(car2 );
-//
-//        System.out.println(car1.getMake());
-//        System.out.println(car2.getMake());
+        /*
+        Car car1 = new Car("Toyota", "Camry", 2020);
+        Car car2 = new Car("Toyota", "Corolla", 2024);
+        car2.copy(car1);
+        System.out.println(car1);
+        System.out.println(car2 );
+
+        System.out.println(car1.getMake());
+        System.out.println(car2.getMake());
+         */
         // Interfaces = a template that can be applied to a class
         //             similar to inheritance, but specifies what a class has/must do
         //             classes can apply more than one interface, inheritance is limited to one superclass
+        /*
+        Rabbit rabbit = new Rabbit();
+        rabbit.flee();
 
-//        Rabbit rabbit = new Rabbit();
-//        rabbit.flee();
-//
-//        Hawk hawk = new Hawk();
-//        hawk.hunt();
-//
-//        Fish fish = new Fish();
-//        fish.flee();
-//        fish.hunt();
+        Hawk hawk = new Hawk();
+        hawk.hunt();
+
+        Fish fish = new Fish();
+        fish.flee();
+        fish.hunt();
+         */
 
         // Polymorsphism = many shapes, a method can do different things based on the object that it is acting upon
         //                method overriding = a child class providing a specific implementation of a method that is already provided by its parent class
         //                method overloading = methods within a class that have the same name but different parameters
+        /*
+        Car car = new Car();
+        Bicycle bicycle = new Bicycle();
+        Boat boat = new Boat();
 
-//        Car car = new Car();
-//        Bicycle bicycle = new Bicycle();
-//        Boat boat = new Boat();
-//
-//        Vehicle[] racers = {car, bicycle, boat};
-//
-//        for (Vehicle racer : racers) {
-//            racer.go();
-//        }
+        Vehicle[] racers = {car, bicycle, boat};
+
+        for (Vehicle racer : racers) {
+            racer.go();
+        }
+         */
 
         // Dynamic Polymorphism = the ability of a single method to do different things based on the object that it is acting upon
         //                         the method to be called is determined at runtime
         //                         method overriding is a perfect example of dynamic polymorphism
         //                         dynamic polymorphism is implemented by abstract classes and interfaces
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("What animal do you want: ");
-//        System.out.println("1. Dog, 2. Cat");
-//        int choice = scanner.nextInt();
-//        if (choice == 1){
-//            Animal animal = new Dog();
-//            animal.speak();
-//        } else if (choice == 2){
-//            Animal animal = new Cat();
-//            animal.speak();
-//        } else {
-//            System.out.println("Invalid choice");
-//            Animal animal = new Animal();
-//            animal.speak();
-//        }
-//        switch (choice) {
-//            case 1:
-//                Animal animal = new Dog();
-//                animal.speak();
-//                break;
-//            case 2:
-//                Animal animal1 = new Cat();
-//                animal1.speak();
-//                break;
-//            default:
-//                System.out.println("Invalid choice");
-//                Animal animal2 = new Animal();
-//                animal2.speak();
-//        }
+        /*
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("What animal do you want: ");
+        System.out.println("1. Dog, 2. Cat");
+        int choice = scanner.nextInt();
+        if (choice == 1){
+            Animal animal = new Dog();
+            animal.speak();
+        } else if (choice == 2){
+            Animal animal = new Cat();
+            animal.speak();
+        } else {
+            System.out.println("Invalid choice");
+            Animal animal = new Animal();
+            animal.speak();
+        }
+        switch (choice) {
+            case 1:
+                Animal animal = new Dog();
+                animal.speak();
+                break;
+            case 2:
+                Animal animal1 = new Cat();
+                animal1.speak();
+                break;
+            default:
+                System.out.println("Invalid choice");
+                Animal animal2 = new Animal();
+                animal2.speak();
+        }
+         */
         // Exception = an event that occurs during the execution of a program that disrupts the normal flow of instructions
         //            Exception Handling = the process of responding to exceptions
-//        Scanner scanner = new Scanner(System.in);
-//        try {
-//            System.out.println("Enter a number to divide : ");
-//            int x = scanner.nextInt();
-//            System.out.println("Enter a number to divide by : ");
-//            int y = scanner.nextInt();
-//
-//
-//            int z = x / y;
-//            System.out.println(z);
-//        } catch (ArithmeticException e) {
-//            System.out.println("Cannot divide by zero");
-//        } catch (InputMismatchException e) {
-//            System.out.println("Invalid input");
-//        } catch (Exception e) {
-//            System.out.println("An error occurred");
-//        } finally {
-//            scanner.close();
-//        }
+        /*
+        Scanner scanner = new Scanner(System.in);
+        try {
+            System.out.println("Enter a number to divide : ");
+            int x = scanner.nextInt();
+            System.out.println("Enter a number to divide by : ");
+            int y = scanner.nextInt();
 
+
+            int z = x / y;
+            System.out.println(z);
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero");
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input");
+        } catch (Exception e) {
+            System.out.println("An error occurred");
+        } finally {
+            scanner.close();
+        }
+         */
+
+        /*
         // File = an abstract representation of file and directory pathnames
 
-//        File file = new File("/home/oluwafemi/Desktop/Psychology2e_WEB.pdf");
-//        if (file.exists()){
-//            System.out.println("File exists");
-//            System.out.println("File name: " + file.getName());
-//            System.out.println("Absolute path: " + file.getAbsolutePath());
-//        } else {
-//            System.out.println("File does not exist");
-//        }
-//        try {
-//            FileWriter writer = new FileWriter("Test.docx \n I am doing this to test my skills in Java");
-//            writer.append("\n Author: Ogundare Oluwafemi");
-//            writer.write("Hello, this is a test file");
-//            writer.close();
-//            System.out.println("File created");
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
+        File file = new File("/home/oluwafemi/Desktop/Psychology2e_WEB.pdf");
+        if (file.exists()){
+            System.out.println("File exists");
+            System.out.println("File name: " + file.getName());
+            System.out.println("Absolute path: " + file.getAbsolutePath());
+        } else {
+            System.out.println("File does not exist");
+        }
+        */
+        /*
+        try {
+            FileWriter writer = new FileWriter("Test.docx \n I am doing this to test my skills in Java");
+            writer.append("\n Author: Ogundare Oluwafemi");
+            writer.write("Hello, this is a test file");
+            writer.close();
+            System.out.println("File created");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        */
+        /*
         //FileReadr = reads the content of a file as a stream of characters. One by one
         //          read() returns an int value which contains the byte value when read
         //          returns -1, there is no more data to be read
 
-//        try {
-//            FileReader reader = new FileReader("/home/oluwafemi/Desktop/Psychology2e_WEB.pdf");
-//            int data = reader.read();
-//            while (data != -1){
-//                System.out.print((char) data);
-//                data = reader.read();
-//            }
-//            System.out.println(reader.read());
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
+        try {
+            FileReader reader = new FileReader("/home/oluwafemi/Desktop/Psychology2e_WEB.pdf");
+            int data = reader.read();
+            while (data != -1){
+                System.out.print((char) data);
+                data = reader.read();
+            }
+            System.out.println(reader.read());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        */
 
         // JFrame = a GUI toolkit for Java to add components to
+
         JFrame frame = new JFrame();
         frame.setTitle("My Practice Title");
         ImageIcon image = new ImageIcon("/home/oluwafemi/Downloads/IMG_20200924_124202.jpg");
@@ -176,5 +197,18 @@ public class Main {
         frame.setSize(430, 430);
         frame.setVisible(true);
 
+        // JLabel
+        Border border = BorderFactory.createLineBorder(Color.green,3);
+        JLabel label = new JLabel();
+        label.setText("My Programming in Java Swing");
+        label.setIcon(image);
+
+        label.setHorizontalTextPosition(JLabel.RIGHT);
+        label.setVerticalTextPosition(JLabel.TOP);
+        label.setForeground(Color.green);
+        label.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+        frame.add(label);
+        label.setBorder(border);
+        label.setVerticalAlignment(JLabel.TOP);
     }
 }
