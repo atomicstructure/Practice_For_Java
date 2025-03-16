@@ -210,5 +210,6 @@ public class Main {
         frame.add(label);
         label.setBorder(border);
         label.setVerticalAlignment(JLabel.TOP);
+        label.setBounds(0, 0, 250, 250 );
     }
 }
