@@ -1,4 +1,6 @@
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -131,13 +133,22 @@ public class Main {
 
         // File = an abstract representation of file and directory pathnames
 
-        File file = new File("/home/oluwafemi/Desktop/Psychology2e_WEB.pdf");
-        if (file.exists()){
-            System.out.println("File exists");
-            System.out.println("File name: " + file.getName());
-            System.out.println("Absolute path: " + file.getAbsolutePath());
-        } else {
-            System.out.println("File does not exist");
+//        File file = new File("/home/oluwafemi/Desktop/Psychology2e_WEB.pdf");
+//        if (file.exists()){
+//            System.out.println("File exists");
+//            System.out.println("File name: " + file.getName());
+//            System.out.println("Absolute path: " + file.getAbsolutePath());
+//        } else {
+//            System.out.println("File does not exist");
+//        }
+        try {
+            FileWriter writer = new FileWriter("Test.docx \n I am doing this to test my skills in Java");
+            writer.append("\n Author: Ogundare Oluwafemi");
+            writer.write("Hello, this is a test file");
+            writer.close();
+            System.out.println("File created");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
 
     }
