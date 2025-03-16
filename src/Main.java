@@ -1,6 +1,4 @@
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -141,15 +139,29 @@ public class Main {
 //        } else {
 //            System.out.println("File does not exist");
 //        }
-        try {
-            FileWriter writer = new FileWriter("Test.docx \n I am doing this to test my skills in Java");
-            writer.append("\n Author: Ogundare Oluwafemi");
-            writer.write("Hello, this is a test file");
-            writer.close();
-            System.out.println("File created");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            FileWriter writer = new FileWriter("Test.docx \n I am doing this to test my skills in Java");
+//            writer.append("\n Author: Ogundare Oluwafemi");
+//            writer.write("Hello, this is a test file");
+//            writer.close();
+//            System.out.println("File created");
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+        //FileReadr = reads the content of a file as a stream of characters. One by one
+        //          read() returns an int value which contains the byte value when read
+        //          returns -1, there is no more data to be read
 
+//        try {
+//            FileReader reader = new FileReader("/home/oluwafemi/Desktop/Psychology2e_WEB.pdf");
+//            int data = reader.read();
+//            while (data != -1){
+//                System.out.print((char) data);
+//                data = reader.read();
+//            }
+//            System.out.println(reader.read());
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
     }
 }
