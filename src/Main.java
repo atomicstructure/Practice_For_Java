@@ -1,3 +1,5 @@
+import javax.swing.*;
+import java.awt.*;
 import java.io.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -163,5 +165,16 @@ public class Main {
 //        } catch (IOException e) {
 //            throw new RuntimeException(e);
 //        }
+
+        // JFrame = a GUI toolkit for Java to add components to
+        JFrame frame = new JFrame();
+        frame.setTitle("My Practice Title");
+        ImageIcon image = new ImageIcon("/home/oluwafemi/Downloads/IMG_20200924_124202.jpg");
+        frame.setIconImage(image.getImage());
+        frame.getContentPane().setBackground(Color.BLUE);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(430, 430);
+        frame.setVisible(true);
+
     }
 }
